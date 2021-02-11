@@ -7,8 +7,7 @@ import Todo from './Components/Todo';
 
 function App() {
 
-  const [todos, setTodos] = useState(["eat","sleep","code","pray","repeat"]);  //sample todo items.  these will need to be changed in your app.  Just filler todos, although they are quite important!
-
+ 
   return (
     <div className="App">
       <header className="App-header">
@@ -16,10 +15,7 @@ function App() {
         <div>
          <br/>
           <p>Create a Todo List App</p>
-          <Todo item="1"/>
-          <Todo item="2"/>
-          <Todo item="3"/>
-          {todos.map( (t,i) => <Todo key={i} item={t}/>)}
+         <Todo />
         </div>
       </header>
     </div>

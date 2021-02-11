@@ -1,28 +1,30 @@
 import React, { Component } from 'react'
 
-function Todo(props) {
+class Todo extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            items: []
+          };
+        this.addItem = this.addItem.bind(this);
+      }
+       
+      addItem(e) {
+     
+      }
+  render() {
     return (
-        <div>
-            {props.item}
-            
+      <div className="todoListMain">
+        <div className="header">
+          <form onSubmit={this.addItem}>
+            <input placeholder="enter task">
+            </input>
+            <button type="submit">add</button>
+          </form>
         </div>
-    )
-}
-class TodoList extends Component {
-    render() {
-      return (
-        <div className="todoListMain">
-          <div className="header">
-            <form>
-              <input placeholder="enter task">
-              </input>
-              <button type="submit">add</button>
-            </form>
-          </div>
-        </div>
-      );
-    }
+      </div>
+    );
   }
-
+}
 export default Todo;
 
