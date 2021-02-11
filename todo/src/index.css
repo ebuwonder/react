@@ -12,4 +12,22 @@ code {
     monospace;
     
 }
+.button {
+  width: 9em;
+  height: 1.70em;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flexbox;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  align-items: center; 
+  background:orangered;
+  color: #fff;
+  border: none;
+  border-radius: 0px;
+  font-size: 12px;
+  text-decoration: none; 
+}
 

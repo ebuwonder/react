@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import ListItems from "./ListItems";
 class Todo extends Component {
     constructor(props) {
         super(props);
@@ -10,18 +10,36 @@ class Todo extends Component {
       }
        
       addItem(e) {
-     
+        if (this._inputElement.value !== "") {
+            let newItem = {
+              text: this._inputElement.value,
+              key: Date.now()
+            };
+         
+            this.setState((prevState) => {
+              return { 
+                items: prevState.items.concat(newItem) 
+              };
+            });
+           
+            this._inputElement.value = "";
+          }
+           
+          console.log(this.state.items);
+             
+          e.preventDefault();
       }
   render() {
     return (
       <div className="todoListMain">
         <div className="header">
           <form onSubmit={this.addItem}>
-            <input placeholder="enter task">
+            <input ref={(a) => this._inputElement = a} placeholder="Type your task">
             </input>
-            <button type="submit">add</button>
+            <button class="button" type="submit">Add to List</button>
           </form>
         </div>
+        <ListItems entries={this.state.items}/>
       </div>
     );
   }
