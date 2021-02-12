@@ -3,7 +3,7 @@
 }
 
 .App-logo {
-  height: 15vmin;
+  height: 4em;
   pointer-events: none;
 }
 
@@ -15,19 +15,19 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 30vh;
+  min-height: 9em;
+  margin-bottom:1em;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: 1.5em;
   color: white;
 }
 
 .App-link {
   color: #61dafb;
 }
-
 
 @keyframes App-logo-spin {
   from {
@@ -38,41 +38,3 @@
   }
 }
 
-.todoListMain .container input {
-  padding: 10px;
-  font-size: 16px;
-  border: 2px solid rgb(53, 53, 54);
-  width: 165px;
-}
-.todoListMain .container button {
-  padding: 10px;
-  font-size: 16px;
-  margin: 10px;
-  margin-right: 0px;
-  background-color: #0066FF;
-  color: #FFF;
-  border: 2px solid #0066FF;
-}
-.todoListMain .container button:hover {
-  background-color: #003399;
-  border: 2px solid #003399;
-  cursor: pointer;
-}
-.todoListMain .theList {
-  list-style: none;
-  padding-left: 0;
-  width: 250px;
-} 
-.todoListMain .theList li {
-  color: #333;
-  background-color: rgba(255,255,255,.5);
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  list-style: none;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-}
-ul.theList {
-  padding: 0;
-
-}

@@ -8,6 +8,7 @@ class Todo extends Component {
             items: []
           };
         this.addItem = this.addItem.bind(this);
+        this.deleteItem = this.deleteItem.bind(this);
       }
        
       addItem(e) {
@@ -30,6 +31,16 @@ class Todo extends Component {
              
           e.preventDefault();
       }
+      deleteItem(key) {
+        var filteredItems = this.state.items.filter(function (item) {
+          return (item.key !== key);
+        });
+       
+        this.setState({
+          items: filteredItems
+        });
+      }
+      
   render() {
     return (
       <div className="todoListMain">
@@ -38,6 +49,7 @@ class Todo extends Component {
             <input ref={(a) => this._inputElement = a} placeholder="Type your task">
             </input>
             <button class="button" type="submit">Add to List</button>
+            <button class="button" type="submit">Clear List</button>
           </form>
         </div>
         <ListItems entries={this.state.items}

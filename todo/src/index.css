@@ -1,54 +1,56 @@
 body {
   margin: 0;
+  min-height:50em;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-    
 }
 
-
-.todoListMain .header input {
-  padding: 10px;
-  font-size: 16px;
-  border: 2px solid rgb(156, 26, 26);
-  width: 165px;
+.todoListMain .container input {
+  padding: 1em;
+  font-size: 1em;
+  border: .2em solid orange);
+  width: 15em;
 }
-.todoListMain .header button {
-  padding: 10px;
-  font-size: 16px;
-  margin: 10px;
-  margin-right: 0px;
-  background-color: #08667e;
-  color: #FFF;
-  border: 2px solid #003399;
+.todoListMain .container button {
+  padding: 1.2em;
+  font-size: 1em;
+  margin: .4em;
+  background-color: blue;
+  color: whitesmoke;
+  border: .2em blue;
+  border-radius: 2em;
 }
-.todoListMain .header button:hover {
-  background-color: #003399;
-  border: 2px solid #003399;
-  cursor: pointer;
+.todoListMain .container button:hover {
+  background-color: darkblue;
+  border: .2em solid orange;
 }
 .todoListMain .theList {
-  list-style: none;
-  padding-left: 0;
-  width: 250px;
+  margin-bottom:.5em;
+  width: 32em;
+  border-style: solid;
+  border-color:darkblue;
 } 
 .todoListMain .theList li {
-  color: #333;
-  background-color: rgba(255,255,255,.5);
-  padding: 15px;
-  margin-bottom: 15px;
-  border-radius: 5px;
-  list-style: none;
+  color:darkblue;
+  padding: .5em;
+  font-size: 2em;
+  font-weight:bold;
+  list-style:upper-roman;
+  list-style-position:inside;
 }
 ul.theList {
-  padding: 0;
+  background: lightgray;
+  border-radius: 2em;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  display: inline-block;
 }
 
