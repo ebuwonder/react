@@ -33,17 +33,19 @@ class Todo extends Component {
   render() {
     return (
       <div className="todoListMain">
-        <div className="header">
+        <div className="container">
           <form onSubmit={this.addItem}>
             <input ref={(a) => this._inputElement = a} placeholder="Type your task">
             </input>
             <button class="button" type="submit">Add to List</button>
           </form>
         </div>
-        <ListItems entries={this.state.items}/>
+        <ListItems entries={this.state.items}
+         delete={this.deleteItem}/>
       </div>
     );
   }
 }
+
 export default Todo;
 

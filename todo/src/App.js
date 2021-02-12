@@ -12,10 +12,14 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <div>
          <br/>
-          <p>Create a Todo List App</p>
-         <Todo />
+          <p>Todo List App</p>
         </div>
       </header>
+      <body>
+        <div>
+      <Todo />
+      </div>
+      </body>
     </div>
   );
 }
