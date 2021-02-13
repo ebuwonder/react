@@ -2,14 +2,25 @@ import React from 'react';
 import Article from '../Components/Article';
 
 function Sports() {
+    const [articles, setArticles] = useState([]);
+  
+    useEffect(() => {
+      API.getSports().then((results) => {
+        setArticles(selectTopFive(results.data.articles));
+      });
+    }, []);
+  
     return (
-        <div>
-            <h1>Sports News goes here: </h1>
-            <Article/>
-            <Article/>
-            <Article/>
-        </div>
-    )
-}
+      <>
+        <h1>Sports: </h1>
+        {articles.map((article, i) => (
+          <Article
+          key={i}
+          data={article[i]}
+        />
+        ))}
+      </>
+    );
+  }
 
 export default Sports;

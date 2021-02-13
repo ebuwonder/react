@@ -1,8 +1,7 @@
-import API from "../utils/API";
+import API from "./API";
 import React, { useEffect, useState } from "react";
 import Article from "../Components/Article";
-import React from 'react';
-import Article from '../Components/Article';
+
 
 function Headlines() {
     const [articles, setArticles] = useState([]);
