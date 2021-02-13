@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import ListItems from './ListItems';
+import Items from './Items';
 
-class Todo extends Component {
+class TodoList extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -26,7 +26,6 @@ class Todo extends Component {
            
             this._inputElement.value = "";
           }
-           
           console.log(this.state.items);
              
           e.preventDefault();
@@ -35,11 +34,11 @@ class Todo extends Component {
         var filteredItems = this.state.items.filter(function (item) {
           return (item.key !== key);
         });
-       
         this.setState({
           items: filteredItems
         });
       }
+  
       
   render() {
     return (
@@ -48,16 +47,16 @@ class Todo extends Component {
           <form onSubmit={this.addItem}>
             <input ref={(a) => this._inputElement = a} placeholder="Type your task">
             </input>
-            <button class="button" type="submit">Add to List</button>
-            <button class="button" type="submit">Clear List</button>
+            <button class="button" type="submit" value="submit">Add to List</button>
+            <button class="button" type="reset">Clear List</button>
           </form>
         </div>
-        <ListItems entries={this.state.items}
+        <Items entries={this.state.items}
          delete={this.deleteItem}/>
       </div>
     );
   }
 }
 
-export default Todo;
+export default TodoList;
 

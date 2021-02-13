@@ -1,11 +1,10 @@
 import logo from './tek_logo.png';
 import './App.css';
-import Todo from './Components/Todo';
-import ListItems from './Components/ListItems';
+import TodoList from './Components/Todo';
+import Items from './Components/Items';
 
 
 function App() {
-
  
   return (
     <div className="App">
@@ -18,7 +17,7 @@ function App() {
       </header>
       <body> 
       <div>
-      <Todo />
+      <TodoList />
       </div>
       </body>
     </div>

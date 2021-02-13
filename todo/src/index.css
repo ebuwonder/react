@@ -7,17 +7,15 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
 .todoListMain .container input {
-  padding: 1em;
+  padding: 1.1em;
   font-size: 1em;
-  border: .2em solid orange);
-  width: 15em;
+  border: .2em solid orange;
+  width: 16em;
 }
 .todoListMain .container button {
   padding: 1.2em;
@@ -26,25 +24,25 @@ code {
   background-color: blue;
   color: whitesmoke;
   border: .2em blue;
-  border-radius: 2em;
+  border-radius: 1.5em;
 }
 .todoListMain .container button:hover {
   background-color: darkblue;
   border: .2em solid orange;
 }
 .todoListMain .theList {
-  margin-bottom:.5em;
   width: 32em;
   border-style: solid;
   border-color:darkblue;
 } 
 .todoListMain .theList li {
   color:darkblue;
-  padding: .5em;
+  padding: .4em;
+  margin: .4em;
   font-size: 2em;
-  font-weight:bold;
-  list-style:upper-roman;
-  list-style-position:inside;
+  font-weight: bold;
+  list-style: disc;
+  list-style-position: inside;
 }
 ul.theList {
   background: lightgray;
@@ -52,5 +50,6 @@ ul.theList {
   overflow: hidden;
   overflow-wrap: break-word;
   display: inline-block;
+  text-align: left;
 }
 
