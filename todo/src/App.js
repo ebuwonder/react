@@ -1,9 +1,6 @@
 import logo from './tek_logo.png';
 import './App.css';
 import TodoList from './Components/Todo';
-import Items from './Components/Items';
-
-
 function App() {
  
   return (

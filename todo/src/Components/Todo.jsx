@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react'
 import Items from './Items';
 
@@ -31,7 +32,7 @@ class TodoList extends Component {
           e.preventDefault();
       }
       deleteItem(key) {
-        var filteredItems = this.state.items.filter(function (item) {
+        let filteredItems = this.state.items.filter(function (item) {
           return (item.key !== key);
         });
         this.setState({
@@ -39,7 +40,6 @@ class TodoList extends Component {
         });
       }
   
-      
   render() {
     return (
       <div className="todoListMain">
@@ -48,7 +48,6 @@ class TodoList extends Component {
             <input ref={(a) => this._inputElement = a} placeholder="Type your task">
             </input>
             <button class="button" type="submit" value="submit">Add to List</button>
-            <button class="button" type="reset">Clear List</button>
           </form>
         </div>
         <Items entries={this.state.items}
