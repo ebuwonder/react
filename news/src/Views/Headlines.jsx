@@ -1,16 +1,30 @@
+import API from "../utils/API";
+import React, { useEffect, useState } from "react";
+import Article from "../Components/Article";
 import React from 'react';
 import Article from '../Components/Article';
 
 function Headlines() {
+    const [articles, setArticles] = useState([]);
+  
+    useEffect(() => {
+      API.getHeadlines().then((results) => {
+        setArticles(selectTopThree(results.data.articles));
+      });
+    }, []);
+  
     return (
-        <div>
-            <h1>Headline News goes here: </h1> 
-            <p>This should be on the main home page</p>
-            <Article/>
-            <Article/>
-            <Article/>
-        </div>
-    )
-}
+      <>
+        <h1>Headlines: </h1>
+        {articles.map((article, i) => (
+          <Article
+            key={i}
+            data={article[i]}
+          />
+        ))}
+      </>
+    );
+  }
+  
 
 export default Headlines;

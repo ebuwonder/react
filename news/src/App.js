@@ -1,3 +1,4 @@
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import logo from './tek_logo.png';
 import './App.css';
 import NavBar from './Components/NavBar';
@@ -10,7 +11,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <Router basename="/">
+      <Router basename="/"/>
         <NavBar/>
         <img src={logo} className="App-logo" alt="logo" />
         <div>
