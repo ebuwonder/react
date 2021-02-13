@@ -1,7 +1,7 @@
 import React from 'react';
 import Article from '../Components/Article';
 import API from "./API";
-import { selectTopThree } from "./Views";
+import { selectTopThree } from "./";
 function Sports() {
     const [articles, setArticles] = useState([]);
   

@@ -7,7 +7,7 @@ function Article(props) {
 
   const fullArticleDirect = () => {
       localStorage.setItem("article", JSON.stringify(props))
-      history.push("/ArticleDetail");
+      history.push("/Details");
   };
 
   return (

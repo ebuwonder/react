@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-function ArticleDetail() {
+function Details() {
   const [details, setDetails] = useState({
     data: "",
   });
@@ -28,5 +28,12 @@ function ArticleDetail() {
     </article>
   );
 }
+export const selectTopThree = data => {
+  const resultsArray = [];
+  for (let i = 0; i < 5; i++) {
+      resultsArray.push(data)
+  }
+  return resultsArray
+}
 
-export default ArticleDetail;
+export default Details;

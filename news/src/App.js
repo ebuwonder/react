@@ -1,27 +1,25 @@
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import logo from './tek_logo.png';
-import './App.css';
+import './App.scss';
 import NavBar from './Components/NavBar';
 import Headlines from './Views/Headlines';
 import Sports from './Views/Sports';
 import Weather from './Views/Weather';
+import Details from "./Views/Details";
 import Footer from './Components/Footer';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <Router basename="/"/>
-        <NavBar/>
-        <img src={logo} className="App-logo" alt="logo" />
+      <Router basename="/">
+        <NavBar />
         <div>
-         <br/>
-          <p>News Article Site</p>
-          <p>Check out these articles</p>
-          <Headlines/>
-          <Sports/>
-          <Weather/>
-        </div>
+              <Route exact path="/" component={Headlines} />
+              <Route exact path="/Sports" component={Sports} />
+              <Route exact path="/Weather" component={Weather} />
+              <Route exact path="/Details" component={Details} />
+            </div>
+          </Router>
       </header>
       <Footer/>
     </div>
