@@ -1,13 +1,14 @@
 import React from 'react';
 import Article from '../Components/Article';
 import API from "./API";
+import { selectTopThree } from "./Views";
 
 function Weather() {
     const [articles, setArticles] = useState([]);
   
     useEffect(() => {
       API.getWeather().then((results) => {
-        setArticles(selectTopFive(results.data.articles));
+        setArticles(selectTopThree(results.data.articles));
       });
     }, []);
   

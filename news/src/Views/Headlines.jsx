@@ -1,7 +1,7 @@
 import API from "./API";
 import React, { useEffect, useState } from "react";
 import Article from "../Components/Article";
-
+import { selectTopThree } from "./Views";
 
 function Headlines() {
     const [articles, setArticles] = useState([]);
